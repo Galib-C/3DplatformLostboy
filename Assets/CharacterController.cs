@@ -11,7 +11,7 @@ public class CharacterController : MonoBehaviour
     GameObject cam;
     Rigidbody myRigidbody;
     public float maxSprint = 5.0f;
-    float sprintTimer;
+    public float sprintTimer;
     void Start()
     {
         sprintTimer = maxSprint;
@@ -41,12 +41,17 @@ public class CharacterController : MonoBehaviour
             myRigidbody.AddForce(transform.up * jumpForce);
         }
 
+        if(sprintTimer > maxSprint)
+        {
+            sprintTimer = maxSprint;
+        }
 
-        if(Input.GetKey(KeyCode.LeftShift) && sprintTimer > 0.0F)
+        if(Input.GetKey(KeyCode.LeftShift) && sprintTimer > 0.1F)
         {
             maxSpeed = sprintspeed;
-            sprintspeed = sprintTimer - Time.deltaTime;
-        }else
+            sprintTimer = sprintTimer - Time.deltaTime;
+        }
+        else
         {
             maxSpeed = normalspeed;
             if(Input.GetKey(KeyCode.LeftShift) == false) {
