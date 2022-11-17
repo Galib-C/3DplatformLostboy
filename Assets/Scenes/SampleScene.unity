@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 580136747}
   - component: {fileID: 580136746}
   - component: {fileID: 580136745}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -524,7 +524,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7524aaea8ebeea94db5e7f33b903bb68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxspeed: 16.63
+  maxSpeed: 5
+  normalspeed: 3
+  sprintspeed: 5
+  maxSprint: 10
+  maxspeed: 15
   groundChecker: {fileID: 1894188677}
   groundLayer:
     serializedVersion: 2
