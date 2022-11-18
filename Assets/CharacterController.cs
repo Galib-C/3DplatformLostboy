@@ -17,6 +17,9 @@ public class CharacterController : MonoBehaviour
         sprintTimer = maxSprint;
         cam = GameObject.Find("Main Camera");
         myRigidbody = GetComponent<Rigidbody>();
+
+        Cursor.lockState = CursorLockMode.Locked;
+
     }
     
     
@@ -33,6 +36,7 @@ public class CharacterController : MonoBehaviour
 
     void Update()
     {
+       
 
         isOnGround = Physics.CheckSphere(groundChecker.transform.position, 0.3f, groundLayer);
 
