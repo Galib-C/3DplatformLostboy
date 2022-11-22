@@ -36,6 +36,7 @@ public class CharacterController : MonoBehaviour
 
     void Update()
     {
+        camRotation = Mathf.Clamp(camRotation, -40.0f, 40.0f);
        
 
         isOnGround = Physics.CheckSphere(groundChecker.transform.position, 0.3f, groundLayer);
