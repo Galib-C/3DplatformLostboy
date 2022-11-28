@@ -11,6 +11,9 @@ public class KillBlock : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        player.transform.position = respawn_point.transform.position;
+        if(other.tag == "Player")
+        {
+            player.transform.position = respawn_point.transform.position;
+        }
     }
 }
