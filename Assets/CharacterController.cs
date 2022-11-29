@@ -12,8 +12,13 @@ public class CharacterController : MonoBehaviour
     Rigidbody myRigidbody;
     public float maxSprint = 5.0f;
     public float sprintTimer;
+    Animator myAnim;
+    
+    
+    
     void Start()
     {
+        myAnim = GetComponentInChildren<Animator>();
         sprintTimer = maxSprint;
         cam = GameObject.Find("Main Camera");
         myRigidbody = GetComponent<Rigidbody>();
@@ -40,9 +45,17 @@ public class CharacterController : MonoBehaviour
        
 
         isOnGround = Physics.CheckSphere(groundChecker.transform.position, 0.3f, groundLayer);
+       
+        //animations
+        myAnim.SetBool("isOnGround", isOnGround);
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            myAnim.SetTrigger("jumped");
+        }
 
         if (isOnGround == true && Input.GetKeyDown(KeyCode.Space))
         {
+            myAnim.SetTrigger("jumped");
             myRigidbody.AddForce(transform.up * jumpForce);
         }
 
@@ -74,6 +87,9 @@ public class CharacterController : MonoBehaviour
 
         //transform.position = transform.position + (transform.forward * Input.GetAxis("Vertical") * maxspeed);
         Vector3 newVelocity = (transform.forward * Input.GetAxis("Vertical") * maxspeed) + (transform.right * Input.GetAxis("Horizontal") * maxspeed);
+
+        myAnim.SetFloat("speed", newVelocity.magnitude);
+
         myRigidbody.velocity = new Vector3(newVelocity.x, myRigidbody.velocity.y, newVelocity.z);
 
         rotation = rotation + Input.GetAxis("Mouse X");
