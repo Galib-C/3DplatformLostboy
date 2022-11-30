@@ -20,10 +20,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0
-  m_TransitionOffset: 0
-  m_ExitTime: 8.15853e-10
-  m_HasExitTime: 1
+  m_TransitionDuration: 0.071489334
+  m_TransitionOffset: 0.10723396
+  m_ExitTime: 0.07495091
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -36,7 +36,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: JUMP
-  m_Speed: 4.15
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -4442139723840583009}
@@ -50,7 +50,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: eeebb4ecfec83184e851b6c28934b440, type: 3}
+  m_Motion: {fileID: -203655887218126122, guid: e9886f73864dfb54dbd13889c6419526, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -104,10 +104,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0
-  m_TransitionOffset: 0
-  m_ExitTime: 0
-  m_HasExitTime: 1
+  m_TransitionDuration: 0.2565183
+  m_TransitionOffset: 0.010240933
+  m_ExitTime: 0.82089466
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -208,7 +208,7 @@ AnimatorStateMachine:
     m_Position: {x: 20, y: 350, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7852708709282380017}
-    m_Position: {x: 340, y: 340, z: 0}
+    m_Position: {x: 350, y: 340, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -423531159685994409}
     m_Position: {x: 340, y: 410, z: 0}
@@ -304,10 +304,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.06945237
-  m_TransitionOffset: 0
-  m_ExitTime: 0.0000000010585298
-  m_HasExitTime: 1
+  m_TransitionDuration: 0.759675
+  m_TransitionOffset: 0.0101893945
+  m_ExitTime: 0.9460468
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -322,7 +322,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: speed
-    m_EventTreshold: 0.01
+    m_EventTreshold: 0.1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5652292027875877244}
   m_Solo: 0
