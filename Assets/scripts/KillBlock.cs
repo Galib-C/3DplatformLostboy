@@ -16,4 +16,12 @@ public class KillBlock : MonoBehaviour
             player.transform.position = respawn_point.transform.position;
         }
     }
+
+    private void OnCollisionEnter(Collision collision) 
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            player.transform.position = respawn_point.transform.position;
+        }
+    }
 }
