@@ -6,6 +6,10 @@ public class Ending : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+        if(other.tag == "Player")
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 }
